@@ -1,5 +1,9 @@
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400);
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,900");
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
 
 /* universal */
 
@@ -21,21 +25,20 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 /* typography */
+
 * {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  font-family: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: 'Merriweather', serif;
 }
 
 h1 {
@@ -52,10 +55,55 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: 400;
-  color: #999;
+  color: $grayLight;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: 900;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
 }
